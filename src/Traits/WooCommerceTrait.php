@@ -15,13 +15,9 @@ trait WooCommerceTrait
      */
     public function all($endpoint = '', $options = [])
     {
-        try {
-            self::__construct();
+        self::__construct();
 
-            return $this->client->get($endpoint, $options);
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage(), 1);
-        }
+        return $this->client->get($endpoint, $options);
     }
 
     /**
@@ -35,13 +31,9 @@ trait WooCommerceTrait
      */
     public function find($endpoint = '', $options = [])
     {
-        try {
-            self::__construct();
+        self::__construct();
 
-            return $this->client->get($endpoint, $options);
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage(), 1);
-        }
+        return $this->client->get($endpoint, $options);
     }
 
     /**
@@ -55,13 +47,9 @@ trait WooCommerceTrait
      */
     public function create($endpoint, $data)
     {
-        try {
-            self::__construct();
+        self::__construct();
 
-            return $this->client->post($endpoint, $data);
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage(), 1);
-        }
+        return $this->client->post($endpoint, $data);
     }
 
     /**
@@ -75,13 +63,9 @@ trait WooCommerceTrait
      */
     public function update($endpoint, $data)
     {
-        try {
-            self::__construct();
+        self::__construct();
 
-            return $this->client->put($endpoint, $data);
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage(), 1);
-        }
+        return $this->client->put($endpoint, $data);
     }
 
     /**
@@ -95,13 +79,9 @@ trait WooCommerceTrait
      */
     public function delete($endpoint, $options = [])
     {
-        try {
-            self::__construct();
+        self::__construct();
 
-            return $this->client->delete($endpoint, $options);
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage(), 1);
-        }
+        return $this->client->delete($endpoint, $options);
     }
 
     /**
@@ -111,11 +91,7 @@ trait WooCommerceTrait
      */
     public function getRequest()
     {
-        try {
-            return $this->client->http->getRequest();
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage(), 1);
-        }
+        return $this->client->http->getRequest();
     }
 
     /**
@@ -125,11 +101,7 @@ trait WooCommerceTrait
      */
     public function getResponse()
     {
-        try {
-            return $this->client->http->getResponse();
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage(), 1);
-        }
+        return $this->client->http->getResponse();
     }
 
     /**
